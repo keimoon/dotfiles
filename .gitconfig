@@ -1,0 +1,8 @@
+[user]
+	name = keimoon
+	email = keimoonvie@gmail.com
+	signingkey = 8943C01406E4BC5D
+[commit]
+	gpgsign = true
+[color]
+	ui = auto
