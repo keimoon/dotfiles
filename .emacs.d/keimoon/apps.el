@@ -51,6 +51,7 @@
 (yas-global-mode 1)
 
 ;; Company
+(require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Expand Region

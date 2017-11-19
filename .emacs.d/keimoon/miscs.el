@@ -21,11 +21,10 @@
    try-complete-lisp-symbol) ;; Try to complete word as an Emacs Lisp symbol.
  )
 
-;;(global-hl-line-mode)
-
 (setq ibuffer-use-other-window t) ;; always display ibuffer in another window
 
 (add-hook 'prog-mode-hook 'linum-mode) ;; enable linum only in programming modes
+(setq linum-format "%4d \u2502 ")
 
 ;; whenever you create useless whitespace, the whitespace is highlighted
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
