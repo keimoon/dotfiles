@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("RTags_1"
+ (filename . "~/projects/personal/cmake/example/main.cpp")
+ (front-context-string . "cchihi(5);\n    p")
+ (rear-context-string . " booboo(2);\n    ")
+ (position . 435))
+("RTags_0"
+ (filename . "~/projects/personal/cmake/example/main.cpp")
+ (front-context-string . "cchihi(1);\n    b")
+ (rear-context-string . "   test(1);\n    ")
+ (position . 405))
+)

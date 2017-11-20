@@ -1,10 +1,10 @@
 ;;; company-irony-c-headers-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "company-irony-c-headers" "company-irony-c-headers.el"
-;;;;;;  (23056 21738 0 0))
+;;;;;;  (23058 40718 0 0))
 ;;; Generated autoloads from company-irony-c-headers.el
 
 (autoload 'company-irony-c-headers "company-irony-c-headers" "\

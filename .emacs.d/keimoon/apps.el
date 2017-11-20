@@ -50,10 +50,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-;; Company
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-
 ;; Expand Region
 (require 'expand-region)
 (global-set-key (kbd "M-m") 'er/expand-region)
