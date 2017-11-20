@@ -32,3 +32,11 @@
 
 (with-eval-after-load 'flycheck
   (flycheck-popup-tip-mode))
+
+;; Company
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay 0)
+(define-key c-mode-map [(tab)] 'company-complete)
+(define-key c++-mode-map [(tab)] 'company-complete)
+;; Delay when idle because I want to be able to think
+(setq company-idle-delay 0.2)

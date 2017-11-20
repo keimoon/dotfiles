@@ -9,10 +9,17 @@
 ;; rtags
 (require 'rtags)
 (setq rtags-autostart-diagnostics t)
+(rtags-diagnostics)
 (rtags-enable-standard-keybindings)
 
 (require 'helm-rtags)
 (setq rtags-display-result-backend 'helm)
+
+(require 'company-rtags)
+(setq rtags-completions-enabled t)
+(eval-after-load 'company
+  '(add-to-list
+    'company-backends 'company-rtags))
 
 ;; cmake ide
 (cmake-ide-setup)
