@@ -38,7 +38,7 @@
           'spacemacs//helm-hide-minibuffer-maybe)
 
 (setq helm-autoresize-max-height 0)
-(setq helm-autoresize-min-height 20)
+(setq helm-autoresize-min-height 40)
 (helm-autoresize-mode 1)
 
 ;; Rebind some
