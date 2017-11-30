@@ -60,6 +60,7 @@
 ;; Dired+
 (setq diredp-hide-details-initially-flag nil)
 (require 'dired+)
+(diredp-toggle-find-file-reuse-dir 1)
 
 ;; Recentf-ext
 (require 'recentf-ext)
