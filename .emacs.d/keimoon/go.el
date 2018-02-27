@@ -12,9 +12,7 @@
   (local-set-key (kbd "M-,") 'pop-tag-mark)
   (local-set-key (kbd "M-p") 'compile)
   (local-set-key (kbd "M-P") 'recompile)
-  (local-set-key (kbd "M-]") 'next-error)
-  (local-set-key (kbd "M-[") 'previous-error)
-  (local-set-key (kbd "TAB") 'company-complete)
+  (local-set-key (kbd "C-c C-c") 'helm-company)
 
   (set (make-local-variable 'company-backends) '(company-go))
   )

@@ -261,3 +261,6 @@ line instead."
   (if (not (one-window-p))
       (delete-window)))
 (global-set-key (kbd "C-c C-k") 'close-and-kill-next-pane)
+
+(global-set-key (kbd "C-c C-j") 'mark-defun)
+(global-set-key (kbd "C-c C-a") 'mark-whole-buffer)

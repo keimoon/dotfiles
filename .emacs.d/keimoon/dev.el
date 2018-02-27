@@ -36,7 +36,12 @@
 ;; Company
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-idle-delay 0)
-(define-key c-mode-map [(tab)] 'company-complete)
-(define-key c++-mode-map [(tab)] 'company-complete)
+(define-key c-mode-map (kbd "C-c C-c") 'company-complete)
+(define-key c++-mode-map (kbd "C-c C-c") 'company-complete)
 ;; Delay when idle because I want to be able to think
 (setq company-idle-delay 0.2)
+
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-c C-c") 'helm-company)
+     (define-key company-active-map (kbd "C-c C-c") 'helm-company)))
