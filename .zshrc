@@ -1,5 +1,15 @@
+# My home
+case `uname -s` in
+    Linux)
+        MYHOME=/home/keimoon
+        ;;
+    Darwin)
+        MYHOME=/Users/keimoon
+        ;;
+esac
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/keimoon/.oh-my-zsh
+export ZSH=$MYHOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -43,7 +53,7 @@ DISABLE_AUTO_TITLE="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/Users/keimoon/.zsh-custom
+ZSH_CUSTOM=$MYHOME/.zsh-custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -55,12 +65,8 @@ plugins=(git jump docker keimoon-alias)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export GOPATH=/Users/keimoon/projects/go
+export GOPATH=$HOME/projects/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-
-export GPG_TTY=$(tty)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,18 +96,3 @@ export EDITOR=emacs
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/keimoon/projects/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/keimoon/projects/google-cloud-sdk/completion.zsh.inc'
-
-# GPG
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    #eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
-    eval $(gpg-agent --daemon)
-fi
