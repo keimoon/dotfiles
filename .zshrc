@@ -96,3 +96,7 @@ export EDITOR=emacs
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [ -f $HOME/.zsh-local ]; then
+    . $HOME/.zsh-local
+fi

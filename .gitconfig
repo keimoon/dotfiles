@@ -6,3 +6,5 @@
 	gpgsign = true
 [color]
 	ui = auto
+[gpg]
+	program = /usr/bin/gpg2
