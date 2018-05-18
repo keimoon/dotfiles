@@ -8,3 +8,5 @@
 	ui = auto
 [gpg]
 	program = /usr/bin/gpg2
+[pager]
+	branch = false
