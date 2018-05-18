@@ -40,7 +40,14 @@ function base64Copy {
     fi
     result=`echo -n "$from" | base64`;
     echo "$result"
-    echo -n "$result" | pbcopy
+    case `uname -s` in
+        Darwin)
+            echo -n "$result" | pbcopy
+            ;;
+        Linux)
+            echo -n "$result" | xclip -i -selection clipboard
+            ;;
+    esac
 }
 
 alias ssh-nohost='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
@@ -48,3 +55,10 @@ alias scp-nohost='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 alias dr='docker run -it'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotconfig/ --work-tree=$HOME'
+
+case `uname -s` in
+    Linux)
+        alias pbcopy='xclip -i -selection clipboard'
+        alias pbpaste='xclip -o -selection clipboard'
+        ;;
+esac
