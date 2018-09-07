@@ -1,5 +1,12 @@
 (provide 'setup-go)
 
+;; The following package must be installed
+;; go get -u golang.org/x/tools/cmd/...
+;; go get -u github.com/rogpeppe/godef/...
+;; go get -u github.com/nsf/gocode
+;; go get -u golang.org/x/tools/cmd/goimports
+;; go get -u github.com/dougm/goflymake
+
 (defun my-go-mode-hook()
   (add-hook 'before-save-hook 'gofmt-before-save)
   (setq gofmt-command "goimports")
