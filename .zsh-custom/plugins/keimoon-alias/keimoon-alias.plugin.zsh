@@ -62,3 +62,7 @@ case `uname -s` in
         alias pbpaste='xclip -o -selection clipboard'
         ;;
 esac
+
+alias d="kitty +kitten diff"
+alias ic="kitty +kitten icat"
+alias gd="git difftool --no-symlinks --dir-diff"
