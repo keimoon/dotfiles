@@ -1,0 +1,10 @@
+cd ~
+layout tall
+title emacs
+launch emacs projects
+
+new_tab run
+layout tall
+cd ~
+launch zsh
+launch zsh
