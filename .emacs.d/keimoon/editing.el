@@ -276,3 +276,20 @@ line instead."
       (process-send-eof proc))))
 
 (global-set-key (kbd "C-c c") 'x-copy)
+
+;; quoting
+(global-set-key "\M-'" 'insert-quotations)
+(global-set-key "\M-\"" 'insert-quotes)
+(global-set-key (kbd "C-c '") 'delete-pair)
+
+(defun insert-quotations (&optional arg)
+  "Enclose following ARG sexps in quotation marks.
+Leave point after open-paren."
+  (interactive "*P")
+  (insert-pair arg ?\' ?\'))
+
+(defun insert-quotes (&optional arg)
+  "Enclose following ARG sexps in quotes.
+Leave point after open-quote."
+  (interactive "*P")
+  (insert-pair arg ?\" ?\"))
