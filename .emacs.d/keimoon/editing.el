@@ -264,3 +264,15 @@ line instead."
 
 (global-set-key (kbd "C-c C-j") 'mark-defun)
 (global-set-key (kbd "C-c C-a") 'mark-whole-buffer)
+
+;; x-copy
+(defun x-copy ()
+  "Copy text on local kill-ring to X11's clipboard."
+  (interactive)
+  (copy-region-as-kill (point) (mark t))
+  (let ((process-connection-type nil))
+    (let ((proc (start-process "xclip" "*Messages*" "xclip" "-i" "-selection" "clipboard")))
+      (process-send-string proc (car kill-ring))
+      (process-send-eof proc))))
+
+(global-set-key (kbd "C-c c") 'x-copy)
