@@ -42,3 +42,6 @@
 ;; Some modes
 (winner-mode 1)
 (column-number-mode 1)
+
+;; Projectile keybindings
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
