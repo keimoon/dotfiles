@@ -1,7 +1,7 @@
 cd ~
 layout tall
 title emacs
-launch emacs projects
+launch zsh -c 'source ~/.zshrc && emacs projects'
 
 new_tab run
 layout tall
