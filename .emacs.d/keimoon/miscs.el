@@ -24,10 +24,12 @@
 (setq ibuffer-use-other-window t) ;; always display ibuffer in another window
 
 (add-hook 'prog-mode-hook 'linum-mode) ;; enable linum only in programming modes
+(add-hook 'yaml-mode-hook 'linum-mode) ;; enable linum in yaml modes
 (setq linum-format "%4d \u2502 ")
 
 ;; whenever you create useless whitespace, the whitespace is highlighted
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
+(add-hook 'yaml-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
