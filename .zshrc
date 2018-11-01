@@ -97,6 +97,8 @@ export EDITOR=emacs
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+unset command_not_found_handle
+
 if [ -f $HOME/.zsh-local ]; then
     . $HOME/.zsh-local
 fi
