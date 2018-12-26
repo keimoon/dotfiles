@@ -38,13 +38,15 @@ function base64Copy {
     else
         from=$1
     fi
-    result=`echo -n "$from" | base64`;
-    echo "$result"
     case `uname -s` in
         Darwin)
+            result=`echo -n "$from" | base64`
+            echo "$result"
             echo -n "$result" | pbcopy
             ;;
         Linux)
+            result=`echo -n "$from" | base64 -w 0`
+            echo "$result"
             echo -n "$result" | xclip -i -selection clipboard
             ;;
     esac
