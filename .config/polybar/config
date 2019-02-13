@@ -1,0 +1,404 @@
+; This is an auto-generated file, do not edit it manually.
+; Run ~/.config/polybar/launch.sh to relaunch the bar
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+[size]
+
+bar-height = 32
+
+[fonts]
+
+font-0 = "Hasklig:size=10"
+font-1 = "Font Awesome 5 Pro:weight=bold:size=10"
+font-2 = "Font Awesome 5 Pro:size=10"
+font-3 = "Font Awesome 5 Brands:size=10"
+font-4 = "Symbola:size=10"
+
+[colors]
+
+dark-green = #006600
+light-green = #66b266
+blue = #9999ff
+cyan = #00b2b2
+purple = #c79dd7
+yellow = #f0c75e
+orange = #ffa700
+red = #ff7f7f
+dark-gray = #444444
+
+light-green-background = #227fbf7f
+blue-background = #224c4cff
+cyan-background = #22007f7f
+pink-background = #22ffc0cb
+purple-background = #22bf7fbf
+orange-background = #22ffa700
+yellow-background = #55f0c75e
+
+background = #aa1d2330
+background-dark = #440c1220
+background-tray = #aa0c1220
+
+foreground = #eee
+foreground-unfocused = #ddd
+foreground-focused = ${self.orange}
+foreground-urgent = ${self.red}
+
+line-focused = ${self.foreground-focused}
+[bar/top]
+
+monitor = ${env:MONITOR}
+monitor-strict = false
+override-redirect = false
+bottom = false
+fixed-center = true
+width = 100%
+height = ${size.bar-height}
+
+line-size = 2
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
+
+modules-left = user i3 xwindow
+modules-center = date
+modules-right = sound backlight system-logout system-restart system-shutdown
+
+enable-ipc = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bottom]
+
+monitor = ${env:MONITOR}
+monitor-strict = false
+override-redirect = false
+bottom = true
+fixed-center = true
+width = 100%
+height = ${size.bar-height}
+
+line-size = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
+
+modules-right = cpu memory temperature battery wifi
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 20
+tray-background = ${colors.background-tray}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 4
+tray-scale = 1.0
+
+enable-ipc = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/backlight]
+
+type = custom/script
+
+exec = ~/.config/polybar/scripts/backlight.sh
+interval = 1
+
+format-padding = 2
+format-foreground = ${colors.yellow}
+format-background = ${colors.purple-background}
+
+scroll-up = light -A 10
+scroll-down = light -U 10
+
+[module/battery]
+
+type = internal/battery
+battery = BAT0
+adapter = AC
+
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+format-charging-padding = 2
+format-charging-background = ${colors.purple-background}
+format-discharging-padding = ${self.format-charging-padding}
+format-discharging-background = ${self.format-charging-background}
+format-full-padding = ${self.format-charging-padding}
+format-full-background = ${self.format-charging-background}
+
+label-charging = %percentage%% (%time%)
+label-discharging = %percentage%% (%time% / %consumption%W)
+label-full = 100%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+[module/cpu]
+
+type = internal/cpu
+
+interval = 2
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label> <ramp-coreload>
+
+; Available tokens:
+;   %percentage% (default) - total cpu load averaged over all cores
+;   %percentage-sum% - Cumulative load on all cores
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = CPU %percentage:2%%
+
+; Spacing between individual per-core ramps
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+format-padding = 2
+format-background = ${colors.yellow-background}
+[module/date]
+
+type = internal/date
+interval = 5
+date = " %a %b %d, %Y"
+date-alt = " %a %b %d, %Y"
+time = %l:%M%p
+time-alt = %l:%M%p
+format-prefix = " "
+label = "%date% %time% "
+[module/i3]
+
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = false
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = true
+fuzzy-match = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+label-mode = %mode%
+
+label-focused = %icon%
+label-focused-padding = 2
+label-focused-foreground = ${colors.foreground-focused}
+label-focused-underline = ${colors.line-focused}
+
+label-unfocused = %icon%
+label-unfocused-padding = ${self.label-focused-padding}
+label-unfocused-foreground = ${colors.foreground-unfocused}
+label-unfocused-underline =
+
+label-visible = %icon%
+label-visible-padding = ${self.label-focused-padding}
+label-visible-underline =
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.foreground-urgent}
+label-urgent-padding = ${self.label-focused-padding}
+[module/memory]
+
+type = internal/memory
+
+interval = 2
+
+format = <label> <bar-used>
+
+label = RAM %gb_used%
+
+; Only applies if <bar-used> is used
+bar-used-indicator =
+bar-used-width = 10
+bar-used-foreground-0 = ${colors.dark-green}
+bar-used-foreground-1 = ${colors.light-green}
+bar-used-foreground-2 = ${colors.yellow}
+bar-used-foreground-3 = ${colors.red}
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = ${colors.dark-gray}
+
+format-padding = 2
+format-background = ${colors.orange-background}
+[module/sound]
+
+type = internal/pulseaudio
+
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+format-volume-padding = 2
+format-volume-background = ${colors.light-green-background}
+format-muted-padding = ${self.format-volume-padding}
+format-muted-background = ${self.format-volume-background}
+
+label-volume = %percentage%%
+
+label-muted = 🔇
+
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+[module/system-logout]
+
+type = custom/text
+
+content = 
+
+content-padding = 2
+content-background = ${colors.background-dark}
+content-foreground = ${colors.cyan}
+
+click-left = i3-msg exit
+[module/system-restart]
+
+type = custom/text
+
+content = 
+
+content-padding = 2
+content-background = ${colors.background-dark}
+content-foreground = ${colors.orange}
+
+click-left = systemctl reboot
+[module/system-shutdown]
+
+type = custom/text
+
+content = 
+
+content-padding = 2
+content-background = ${colors.background-dark}
+content-foreground = ${colors.red}
+
+click-left = systemctl poweroff
+[module/temperature]
+
+type = internal/temperature
+
+interval = 3
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
+warn-temperature = 75
+
+units = true
+
+format = <label>
+format-warn = <label-warn>
+
+label =  %temperature-c%
+label-warn =  %temperature-c%
+
+format-padding = 2
+format-background = ${colors.cyan-background}
+format-warn-padding = ${self.format-padding}
+format-warn-background = ${self.format-background}
+format-warn-foreground = ${colors.orange}
+[module/user]
+
+type = custom/script
+exec = whoami
+
+format-background = ${colors.background-dark}
+format-foreground = ${colors.purple}
+format-padding = 2
+format-prefix = " "
+[module/wifi]
+
+type = internal/network
+interface = ${env:WIRELESS}
+
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = ${self.format-connected}
+
+format-connected-background = ${colors.blue-background}
+format-connected-padding = 2
+format-disconnected-background = ${self.format-connected-background}
+format-disconnected-foreground = ${colors.red}
+format-disconnected-padding = ${self.format-connected-padding}
+format-packetloss-background = ${self.format-connected-background}
+format-packetloss-padding = ${self.format-connected-padding}
+
+label-connected = %essid%    %downspeed:8%    %upspeed:8%
+
+label-disconnected = 
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title%
+label-maxlen = 50
+
+format-prefix = "  "
+format-padding = 2
+format-background = ${colors.background-dark}
+format-foreground = ${colors.yellow}

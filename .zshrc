@@ -66,7 +66,7 @@ plugins=(git jump docker keimoon-alias)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 export GOPATH=$HOME/projects/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$HOME/.bin
 
 source $ZSH/oh-my-zsh.sh
 
