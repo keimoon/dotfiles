@@ -280,6 +280,16 @@ bar-used-empty-foreground = ${colors.dark-gray}
 
 format-padding = 2
 format-background = ${colors.orange-background}
+[module/news]
+
+type = custom/script
+exec = ~/.bin/polybar-news server ~/.config/polybar-news.yml
+tail = true
+
+label = %output:0:80:...%
+
+format-foreground = ${colors.purple}
+format-padding = 2
 [module/sound]
 
 type = internal/pulseaudio

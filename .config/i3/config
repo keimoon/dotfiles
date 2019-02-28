@@ -166,6 +166,6 @@ exec_always --no-startup-id ~/.config/i3/scripts/compton.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dunst.sh
 exec        --no-startup-id ~/.config/i3/scripts/dnf-check-update.sh
 exec_always --no-startup-id ibus-daemon --xim -d -r
-exec_always --no-startup-id feh --bg-fill ~/.config/i3/resources/wallpapers/mass-effects.jpg
+exec_always --no-startup-id ~/.config/i3/scripts/wallpaper.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
