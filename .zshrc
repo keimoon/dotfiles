@@ -59,7 +59,7 @@ ZSH_CUSTOM=$MYHOME/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jump docker keimoon-alias)
+plugins=(git jump docker keimoon-alias keimoon-zaw)
 
 # User configuration
 
@@ -102,3 +102,6 @@ unset command_not_found_handle
 if [ -f $HOME/.zsh-local ]; then
     . $HOME/.zsh-local
 fi
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
