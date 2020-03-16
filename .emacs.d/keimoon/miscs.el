@@ -47,3 +47,6 @@
 
 ;; Projectile keybindings
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; Unmap C-o, fuck that shit
+(global-unset-key (kbd "C-o"))
