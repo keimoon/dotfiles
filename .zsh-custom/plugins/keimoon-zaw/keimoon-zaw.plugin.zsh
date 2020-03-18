@@ -9,4 +9,5 @@ if [ -d $ZSH_CUSTOM/zaw ]; then
     zstyle ':filter-select' max-lines 3
     zstyle ':filter-select' case-insensitive yes # enable case-insensitive
     zstyle ':filter-select' extended-search yes # see below
+    zstyle ':filter-select' hist-find-no-dups yes
 fi
