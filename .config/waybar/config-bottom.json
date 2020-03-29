@@ -1,0 +1,64 @@
+{
+    "name": "botton",
+    "layer": "top",
+    "position": "bottom",
+    "height": 32,
+    "margin": 0,
+    "modules-left": [
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "custom/cpu",
+        "memory",
+        "disk",
+        "temperature",
+        "battery",
+        "network"
+    ],
+    "custom/cpu": {
+        "format": " {}",
+        "exec": "~/.config/waybar/cpu.sh",
+        "interval": 5,
+        "return-type": "json"
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {used:0.1f}GB",
+        "states": {
+            "warning": 60,
+            "critical": 85
+        }
+    },
+    "disk": {
+        "format": " {percentage_used}%"
+    },
+    "temperature": {
+        "thermal-zone": 0,
+	    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input",
+	    "critical-threshold": 75,
+	    "format-critical": " {temperatureC}°C",
+	    "format": " {temperatureC}°C"
+    },
+    "battery": {
+        "interval": 20,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% ({time})",
+        "format-charging": " {capacity}% ({time})",
+        "format-full": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "interval": 5,
+        "format": "{ifname}",
+        "format-wifi": "{icon} {essid} ({signalStrength}%)  {bandwidthDownBits}  {bandwidthUpBits}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 50
+    }
+}

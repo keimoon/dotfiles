@@ -1,0 +1,18 @@
+layer=overlay
+font=Hasklig 12
+format=%a\n\n%s\n%b
+text-color=#FFFFFFFF
+background-color=#262529EE
+width=400
+margin=50,20
+padding=15
+border-size=1
+border-color=#AAAAAAFF
+border-radius=5
+default-timeout=15000
+
+[urgency="high"]
+text-color=#FFFFFFFF
+background-color=#4c0000EE
+border-color=#AAAAAAFF
+default-timeout=0

@@ -47,7 +47,14 @@ function base64Copy {
         Linux)
             result=`echo -n "$from" | base64 -w 0`
             echo "$result"
-            echo -n "$result" | xclip -i -selection clipboard
+            case $XDG_SESSION_TYPE in
+                x11)
+                    echo -n "$result" | xclip -i -selection clipboard
+                    ;;
+                wayland)
+                    echo -n "$result" | wl-copy
+                    ;;
+            esac
             ;;
     esac
 }
@@ -60,8 +67,16 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotconfig/ --work-tree=$HOME'
 
 case `uname -s` in
     Linux)
-        alias pbcopy='xclip -i -selection clipboard'
-        alias pbpaste='xclip -o -selection clipboard'
+        case $XDG_SESSION_TYPE in
+            x11)
+                alias pbcopy='xclip -i -selection clipboard'
+                alias pbpaste='xclip -o -selection clipboard'
+                ;;
+            wayland)
+                alias pbcopy=wl-copy
+                alias pbpaste=wl-paste
+                ;;
+        esac
         ;;
 esac
 

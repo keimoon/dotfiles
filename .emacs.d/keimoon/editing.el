@@ -271,7 +271,7 @@ line instead."
   (interactive)
   (copy-region-as-kill (point) (mark t))
   (let ((process-connection-type nil))
-    (let ((proc (start-process "xclip" "*Messages*" "xclip" "-i" "-selection" "clipboard")))
+    (let ((proc (start-process "pbcoby" "*Messages*" "clipboard-copy")))
       (process-send-string proc (car kill-ring))
       (process-send-eof proc))))
 

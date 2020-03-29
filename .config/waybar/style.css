@@ -1,0 +1,150 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Hasklig, "Font Awesome 5 Pro", "Font Awesome 5 Brands", Symbola, sans-serif;
+  font-size: 12px;
+  min-height: 0;
+  padding: 0;
+}
+
+#waybar {
+  background-color: rgba(29, 35, 48, 0.5);
+  color: #eee;
+}
+
+#custom-user {
+  padding-left: 10px;
+  padding-right: 15px;
+  background-color: rgba(255, 110, 103, 0.4);
+  color: #eee;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+#workspaces {
+  padding-left: 7px;
+}
+#workspaces button {
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: rgba(29, 35, 48, 0.5);
+  color: #ddd;
+}
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: inherit;
+}
+#workspaces button.focused {
+  color: #ffa700;
+  border-bottom: solid 2px #ffa700;
+}
+#workspaces button.urgent {
+  color: #ff7f7f;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(241, 250, 140, 0.4);
+  color: #eee;
+}
+
+window#waybar.solo #window {
+  background-color: rgba(12, 18, 32, 0.6);
+  color: #f1fa8c;
+}
+
+window#waybar.empty #window {
+  background-color: rgba(12, 18, 32, 0.6);
+  color: #f1fa8c;
+}
+
+#pulseaudio {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(255, 167, 0, 0.2);
+}
+
+#backlight {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-logout {
+  background-color: rgba(189, 147, 249, 0.2);
+  color: #00b2b2;
+  padding-left: 25px;
+  padding-right: 15px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+#custom-restart {
+  background-color: rgba(189, 147, 249, 0.2);
+  color: #ffa700;
+  padding-right: 15px;
+}
+
+#custom-shutdown {
+  background-color: rgba(189, 147, 249, 0.2);
+  color: #ff7f7f;
+  padding-right: 15px;
+}
+
+#custom-cpu {
+  padding-left: 15px;
+  padding-right: 10px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background-color: rgba(255, 110, 103, 0.4);
+  color: #eee;
+}
+#custom-cpu.warning {
+  color: #ffa700;
+}
+#custom-cpu.critical {
+  color: #ff7f7f;
+}
+
+#memory {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(255, 167, 0, 0.2);
+  color: #eee;
+}
+#memory.warning {
+  color: #f1fa8c;
+}
+#memory.critical {
+  color: #ff7f7f;
+}
+
+#disk {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(127, 191, 127, 0.2);
+}
+
+#temperature {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(0, 127, 127, 0.2);
+}
+#temperature.critical {
+  background-color: rgba(255, 167, 0, 0.2);
+}
+
+#battery {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(189, 147, 249, 0.2);
+}
+
+#network {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(76, 76, 255, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */

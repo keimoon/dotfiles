@@ -1,0 +1,69 @@
+{
+    "name": "top",
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin": 0,
+    "modules-left": [
+        "custom/user",
+        "sway/workspaces",
+        "sway/window"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "custom/logout",
+        "custom/restart",
+        "custom/shutdown"
+    ],
+    "custom/user": {
+        "format": " {}",
+        "exec": "whoami",
+        "interval": "once"
+    },
+    "sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "default": ""
+        }
+    },
+    "sway/window": {
+        "max-length": 50,
+        "format": "  {}"
+    },
+    "clock": {
+        "format": " {:%a %b %d, %Y %I:%M%p}",
+        "interval": 10
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "exec amixer set Master toggle"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", ""]
+    },
+    "custom/logout": {
+        "format": "",
+        "on-click": "swaymsg exit"
+    },
+    "custom/restart": {
+        "format": "",
+        "on-click": "exec systemctl reboot"
+    },
+    "custom/shutdown": {
+        "format": "",
+        "on-click": "exec systemctl poweroff"
+    }
+}

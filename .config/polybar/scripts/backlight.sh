@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function getLightOutput {
-    value=$(python -c 'print int(round(int('`light`') / 10) * 10)')
+    value=$(python -c 'print(int(round(int('`light`') / 10) * 10))')
     if [ "$value" -lt 20 ]; then
         ramp=🌕
     elif [ "$value" -lt 40 ]; then
