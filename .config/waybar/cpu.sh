@@ -2,19 +2,19 @@
 
 function ramp {
     load=$1
-    if (( $(echo "$average < 12" |bc -l) )); then
+    if (( $(echo "$average < 12" | bc -l) )); then
         echo -n ▁
-    elif (( $(echo "$average < 25" |bc -l) )); then
+    elif (( $(echo "$average < 25" | bc -l) )); then
         echo -n ▂
-    elif (( $(echo "$average < 37" |bc -l) )); then
+    elif (( $(echo "$average < 37" | bc -l) )); then
         echo -n ▃
-    elif (( $(echo "$average < 50" |bc -l) )); then
+    elif (( $(echo "$average < 50" | bc -l) )); then
         echo -n ▄
-    elif (( $(echo "$average < 62" |bc -l) )); then
+    elif (( $(echo "$average < 62" | bc -l) )); then
         echo -n ▅
-    elif (( $(echo "$average < 75" |bc -l) )); then
+    elif (( $(echo "$average < 75" | bc -l) )); then
         echo -n ▆
-    elif (( $(echo "$average < 87" |bc -l) )); then
+    elif (( $(echo "$average < 87" | bc -l) )); then
         echo -n ▇
     else
         echo -n █

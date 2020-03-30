@@ -1,6 +1,6 @@
 layer=overlay
 font=Hasklig 12
-format=%a\n\n%s\n%b
+format=<b>%a</b>\n\n%s\n%b
 text-color=#FFFFFFFF
 background-color=#262529EE
 width=400

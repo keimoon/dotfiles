@@ -14,6 +14,7 @@
         "temperature",
         "battery",
         "network",
+        "custom/network-speed",
         "tray"
     ],
     "custom/cpu": {
@@ -56,10 +57,15 @@
         "interface": "wlp2s0",
         "interval": 5,
         "format": "{ifname}",
-        "format-wifi": "{icon} {essid} ({signalStrength}%)  {bandwidthDownBits}  {bandwidthUpBits}",
+        "format-wifi": "{icon} {essid} ({signalStrength}%)",
         "format-ethernet": " {ifname}",
         "format-disconnected": "",
         "format-icons": ["", "", "", "", ""],
         "max-length": 50
+    },
+    "custom/network-speed": {
+        "format": "{}",
+        "exec": "~/.config/waybar/network-speed.sh wlp2s0",
+        "interval": 5
     }
 }

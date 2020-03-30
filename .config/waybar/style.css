@@ -148,6 +148,11 @@ window#waybar.empty #window {
   background-color: rgba(76, 76, 255, 0.2);
 }
 
+#custom-network-speed {
+  padding-right: 15px;
+  background-color: rgba(76, 76, 255, 0.2);
+}
+
 #tray {
   padding-left: 15px;
   padding-right: 15px;
