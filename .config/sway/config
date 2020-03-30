@@ -57,7 +57,7 @@ bindsym $mod+e workspace $ws3
 bindsym $mod+r workspace $ws4
 
 # Ibus
-bindsym $mod+space exec ~/.config/i3/scripts/ibus-switcher.sh
+bindsym $mod+space exec ~/.config/sway/scripts/ibus-switcher.sh
 
 #######################################
 # Keybinding section (General)
@@ -154,6 +154,7 @@ bindsym $ctrl+$alt+0 exec "makoctl dismiss -a"
 # Screen shot
 bindsym $alt+Shift+3 exec "~/.bin/screencapture"
 bindsym $alt+Shift+4 exec "~/.bin/screencapture region"
+
 #######################################
 # Apps Section
 #######################################
@@ -176,10 +177,6 @@ input type:keyboard {
 
 input type:touchpad {
   tap enabled
-}
-
-input type:mouse {
-  scroll_factor 3.0
 }
 ################################################
 # Output section

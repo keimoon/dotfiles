@@ -27,7 +27,8 @@
 #workspaces button {
   padding-left: 7px;
   padding-right: 7px;
-  background-color: rgba(29, 35, 48, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
   color: #ddd;
 }
 #workspaces button:hover {
@@ -44,8 +45,8 @@
 }
 
 #window {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(241, 250, 140, 0.4);
   color: #eee;
 }
@@ -61,21 +62,21 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(255, 167, 0, 0.2);
 }
 
 #backlight {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #custom-logout {
   background-color: rgba(189, 147, 249, 0.2);
   color: #00b2b2;
   padding-left: 25px;
-  padding-right: 15px;
+  padding-right: 20px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
@@ -83,7 +84,7 @@ window#waybar.empty #window {
 #custom-restart {
   background-color: rgba(189, 147, 249, 0.2);
   color: #ffa700;
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
 #custom-shutdown {
@@ -93,8 +94,8 @@ window#waybar.empty #window {
 }
 
 #custom-cpu {
-  padding-left: 15px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 15px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   background-color: rgba(255, 110, 103, 0.4);
@@ -108,8 +109,8 @@ window#waybar.empty #window {
 }
 
 #memory {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(255, 167, 0, 0.2);
   color: #eee;
 }
@@ -121,14 +122,14 @@ window#waybar.empty #window {
 }
 
 #disk {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(127, 191, 127, 0.2);
 }
 
 #temperature {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(0, 127, 127, 0.2);
 }
 #temperature.critical {
@@ -136,15 +137,20 @@ window#waybar.empty #window {
 }
 
 #battery {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(189, 147, 249, 0.2);
 }
 
 #network {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(76, 76, 255, 0.2);
+}
+
+#tray {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

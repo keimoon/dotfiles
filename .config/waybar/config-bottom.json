@@ -13,7 +13,8 @@
         "disk",
         "temperature",
         "battery",
-        "network"
+        "network",
+        "tray"
     ],
     "custom/cpu": {
         "format": " {}",

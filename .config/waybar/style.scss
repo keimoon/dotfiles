@@ -75,7 +75,8 @@ $foreground-urgent: $foreground-red;
     button {
         padding-left: 7px;
         padding-right: 7px;
-        background-color: $background;
+        margin-left: 5px;
+        margin-right: 5px;
         color: $foreground-unfocused;
 
         &:hover {
@@ -97,8 +98,8 @@ $foreground-urgent: $foreground-red;
 
 // Sway / window
 #window {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-yellow;
     color: $foreground;
 }
@@ -119,14 +120,14 @@ window#waybar.empty {
 
 // Pulseaudio
 #pulseaudio {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-orange;
 }
 
 #backlight {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 // Custom / logout
@@ -134,7 +135,7 @@ window#waybar.empty {
     background-color: $background-purple;
     color: $foreground-cyan;
     padding-left: 25px;
-    padding-right: 15px;
+    padding-right: 20px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -143,7 +144,7 @@ window#waybar.empty {
 #custom-restart {
     background-color: $background-purple;
     color: $foreground-orange;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 // Custom / shutdown
@@ -155,8 +156,8 @@ window#waybar.empty {
 
 // Custom / CPI
 #custom-cpu {
-    padding-left: 15px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
     background-color: $background-red;
@@ -173,8 +174,8 @@ window#waybar.empty {
 
 // Memory
 #memory {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-orange;
     color: $foreground;
 
@@ -188,15 +189,15 @@ window#waybar.empty {
 }
 
 #disk {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-light-green;
 }
 
 // Temperature
 #temperature {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-cyan;
 
     &.critical {
@@ -206,14 +207,20 @@ window#waybar.empty {
 
 // Battery
 #battery {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-purple;
 }
 
 // Wifi
 #network {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $background-blue;
+}
+
+// Tray
+#tray {
+    padding-left: 15px;
+    padding-right: 15px;
 }
