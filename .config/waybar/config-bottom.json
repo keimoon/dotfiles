@@ -1,10 +1,14 @@
 {
-    "name": "botton",
-    "layer": "top",
+    "name": "bottom",
+    "layer": "bottom",
     "position": "bottom",
     "height": 32,
     "margin": 0,
     "modules-left": [
+        "custom/media-prev",
+        "custom/media-play",
+        "custom/media-next",
+        "custom/media-status"
     ],
     "modules-center": [],
     "modules-right": [
@@ -17,6 +21,24 @@
         "custom/network-speed",
         "tray"
     ],
+    "custom/media-prev": {
+        "format": "",
+        "on-click": "playerctl previous"
+    },
+    "custom/media-play": {
+        "format": "",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-next": {
+        "format": "",
+        "on-click": "playerctl next"
+    },
+    "custom/media-status": {
+        "format": " {}",
+        "exec": "~/.config/waybar/mpris.sh",
+        "interval": 5,
+        "return-type": "json"
+    },
     "custom/cpu": {
         "format": " {}",
         "exec": "~/.config/waybar/cpu.sh",

@@ -28,3 +28,5 @@ config checkout
 ![Fullscreen image](./screenshots/fullscreen.png "Fullscreen image")
 
 ![Terminal](./screenshots/terminal.png "Terminal")
+
+![Music player](./screenshots/music-player.png "Spotify")

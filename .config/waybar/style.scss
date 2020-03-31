@@ -154,7 +154,37 @@ window#waybar.empty {
     padding-right: 15px;
 }
 
-// Custom / CPI
+// Custom / Media
+#custom-media-prev, #custom-media-play, #custom-media-next {
+    padding-left: 15px;
+    background-color: $background-yellow;
+    color: $foreground;
+}
+
+#custom-media-next {
+    padding-right: 20px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+#custom-media-status {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.playing {
+        color: $foreground-light-green;
+    }
+
+    &.paused {
+        color: $foreground-orange;
+    }
+
+    &.stopped {
+        color: $foreground-red;
+    }
+}
+
+// Custom / CPU
 #custom-cpu {
     padding-left: 20px;
     padding-right: 15px;
