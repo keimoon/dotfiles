@@ -23,20 +23,21 @@
     ],
     "custom/media-prev": {
         "format": "",
-        "on-click": "playerctl previous"
+        "on-click": "playerctl -p spotifyd previous"
     },
     "custom/media-play": {
         "format": "",
-        "on-click": "playerctl play-pause"
+        "on-click": "playerctl -p spotifyd play-pause"
     },
     "custom/media-next": {
         "format": "",
-        "on-click": "playerctl next"
+        "on-click": "playerctl -p spotifyd next"
     },
     "custom/media-status": {
         "format": " {}",
         "exec": "~/.config/waybar/mpris.sh",
         "interval": 5,
+        "max-length": 50,
         "return-type": "json"
     },
     "custom/cpu": {
