@@ -161,7 +161,7 @@ bindsym $alt+Shift+4 exec "~/.bin/screencapture region"
 
 # Bind common apps to workspace
 
-assign [class="kitty"] 1
+assign [app_id="kitty"] 1
 assign [class="Google-chrome"] 2
 assign [class="Franz"] 3
 assign [class="jetbrains-idea-ce"] 4
