@@ -22,7 +22,7 @@
  dired-dwim-target t            ; if another Dired buffer is visible in another window, use that directory as target for Rename/Copy
  dired-recursive-copies 'always         ; "always" means no asking
  dired-recursive-deletes 'top           ; "top" means ask once for top level directory
- dired-listing-switches "-lha"          ; human-readable listing
+ dired-listing-switches "-la"          ; human-readable listing
  )
 
 (add-hook 'dired-mode-hook 'auto-revert-mode)

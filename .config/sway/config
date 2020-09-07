@@ -33,7 +33,7 @@ workspace_layout stacking
 # UI Section
 #######################################
 
-font pango:Hasklig 0
+font pango:Hasklig-Regular 0
 hide_edge_borders both
 titlebar_border_thickness 0                                                     
 titlebar_padding 0
@@ -55,6 +55,7 @@ bindsym $mod+q workspace $ws1
 bindsym $mod+w workspace $ws2
 bindsym $mod+e workspace $ws3
 bindsym $mod+r workspace $ws4
+bindsym $mod+a workspace $ws5
 
 # Ibus
 bindsym $mod+space exec ~/.config/sway/scripts/ibus-switcher.sh
@@ -183,7 +184,6 @@ input type:touchpad {
 ################################################
 
 output * bg ~/.config/sway/resources/wallpapers/house.jpg stretch
-
 ################################################
 # Auto start section
 ################################################
@@ -191,8 +191,5 @@ output * bg ~/.config/sway/resources/wallpapers/house.jpg stretch
 exec_always --no-startup-id ~/.config/sway/scripts/mako.sh
 exec        --no-startup-id ~/.config/sway/scripts/dnf-check-update.sh
 exec_always --no-startup-id ibus-daemon --xim -d -r
-
-bar {
-    swaybar_command ~/.config/waybar/launch.sh
-}
+exec_always --no-startup-id ~/.config/waybar/launch.sh
 
