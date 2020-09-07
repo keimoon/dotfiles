@@ -22,6 +22,9 @@
 (require 'setup-dev-miscs)
 (require 'setup-theme)
 (require 'setup-ts)
+
+(diredp-toggle-find-file-reuse-dir 1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
