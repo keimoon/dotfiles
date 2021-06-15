@@ -153,6 +153,7 @@ bindsym XF86AudioMute        exec amixer set Master toggle
 assign [class="kitty"] 1
 assign [class="Google-chrome"] 2
 assign [class="Franz"] 3
+assign [class="Slack"] 3
 assign [class="jetbrains-idea-ce"] 4
 ################################################
 # Auto start section
@@ -160,9 +161,9 @@ assign [class="jetbrains-idea-ce"] 4
 
 exec_always --no-startup-id xset r rate 250 60
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id ~/.config/i3/scripts/hdmi.sh
+# exec_always --no-startup-id ~/.config/i3/scripts/hdmi.sh
 exec_always --no-startup-id ~/.config/i3/scripts/trackpad.sh
-exec_always --no-startup-id ~/.config/i3/scripts/compton.sh
+# exec_always --no-startup-id ~/.config/i3/scripts/compton.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dunst.sh
 exec        --no-startup-id ~/.config/i3/scripts/dnf-check-update.sh
 exec_always --no-startup-id ibus-daemon --xim -d -r

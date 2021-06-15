@@ -31,7 +31,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dap-mode lsp-metals posframe company-lsp fireplace go-rename tide groovy-mode toml-mode company-go exec-path-from-shell ranger docker company-rtags kubernetes sbt-mode company company-irony company-irony-c-headers helm-company ztree zenburn-theme yasnippet workgroups2 web-mode volatile-highlights undo-tree terraform-mode smartparens scala-mode recentf-ext pos-tip markdown-mode magit ibuffer-vc highlight-numbers helm-rtags helm-projectile go-mode function-args flycheck-popup-tip expand-region duplicate-thing dockerfile-mode docker-compose-mode diff-hl cmake-mode cmake-ide clean-aindent-mode auto-complete ample-theme)))
+   '(yaml-mode dap-mode lsp-metals posframe company-lsp fireplace go-rename tide groovy-mode toml-mode company-go exec-path-from-shell ranger docker company-rtags kubernetes sbt-mode company company-irony company-irony-c-headers helm-company ztree zenburn-theme yasnippet workgroups2 web-mode volatile-highlights undo-tree terraform-mode smartparens scala-mode recentf-ext pos-tip markdown-mode magit ibuffer-vc highlight-numbers helm-rtags helm-projectile go-mode function-args flycheck-popup-tip expand-region duplicate-thing dockerfile-mode docker-compose-mode diff-hl cmake-mode cmake-ide clean-aindent-mode auto-complete ample-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -260,7 +260,7 @@
     close = ctrl+mod4+space
 
     # Close all notifications.
-    close_all = ctrl+mod4+k
+    close_all = ctrl+mod1+0
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
