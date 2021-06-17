@@ -13,9 +13,7 @@
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (autoload 'ample-flat-theme "ample-flat-theme" "\
-Apply the ample-flat-theme.
-
-\(fn)" t nil)
+Apply the ample-flat-theme." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-flat-theme" '("ample-flat")))
 
@@ -28,9 +26,7 @@ Apply the ample-flat-theme.
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (autoload 'ample-light-theme "ample-light-theme" "\
-Apply the ample-light-theme.
-
-\(fn)" t nil)
+Apply the ample-light-theme." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-light-theme" '("ample-light")))
 
@@ -42,9 +38,7 @@ Apply the ample-light-theme.
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 (autoload 'ample-theme "ample-theme" "\
-Apply the ample-theme.
-
-\(fn)" t nil)
+Apply the ample-theme." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-theme" '("ample")))
 

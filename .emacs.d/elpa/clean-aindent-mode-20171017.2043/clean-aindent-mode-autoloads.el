@@ -24,6 +24,11 @@ or call the function `clean-aindent-mode'.")
 Activates clean auto indent for function 'newline-and-indent' and
 back-space unindent for M-DEL (meta-backspace).
 
+If called interactively, enable Clean-Aindent mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 clean-aindent mode is a global minor mode.
 
 1. Extension of 'newline-and-indent' that keeps track of the last

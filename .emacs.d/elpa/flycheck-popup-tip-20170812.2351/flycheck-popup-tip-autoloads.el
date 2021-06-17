@@ -13,6 +13,11 @@
 (autoload 'flycheck-popup-tip-mode "flycheck-popup-tip" "\
 A minor mode to show Flycheck error messages in a popup.
 
+If called interactively, enable Flycheck-Popup-Tip mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck-popup-tip" '("flycheck-popup-tip-")))

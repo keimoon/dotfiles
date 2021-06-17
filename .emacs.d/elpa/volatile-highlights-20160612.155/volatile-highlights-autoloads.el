@@ -23,9 +23,14 @@ or call the function `volatile-highlights-mode'.")
 (autoload 'volatile-highlights-mode "volatile-highlights" "\
 Minor mode for visual feedback on some operations.
 
+If called interactively, enable Volatile-Highlights mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "volatile-highlights" '("vhl/" "Vhl/highlight-zero-width-ranges")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "volatile-highlights" '("Vhl/highlight-zero-width-ranges" "vhl/")))
 
 ;;;***
 

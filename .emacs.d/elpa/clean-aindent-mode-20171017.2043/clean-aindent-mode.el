@@ -8,6 +8,7 @@
 ;; Last: 2015-08-16
 ;; Version: 1.5.0
 ;; Package-Version: 20171017.2043
+;; Package-Commit: a97bcae8f43a9ff64e95473e4ef0d8bafe829211
 ;; License: C0 (public domain)
 ;; URL: https://github.com/pmarinov/clean-aindent-mode
 ;; Doc URL: http://www.emacswiki.org/emacs/CleanAutoIndent
