@@ -7,7 +7,7 @@ fi
 currentEngine=`ibus engine`
 
 if [ "$currentEngine" == "xkb:us::eng" ]; then
-    ibus engine m17n:vi:telex
+    ibus engine Unikey
 else
     ibus engine xkb:us::eng
 fi

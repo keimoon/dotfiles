@@ -4,7 +4,7 @@
   :config
   (global-diff-hl-mode)
   (diff-hl-margin-mode)
-  (setq diff-hl-margin-side 'right)
+  (setq diff-hl-side 'right)
   (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
   )
 
