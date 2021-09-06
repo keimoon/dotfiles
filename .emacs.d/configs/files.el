@@ -27,6 +27,9 @@
 
   ;; Show directory first
   (setq dired-listing-switches "-alh --group-directories-first")
+
+  ;; Copy between buffers
+  (setq dired-dwim-target t)
   )
 
 (use-package dired-aux :ensure nil)
