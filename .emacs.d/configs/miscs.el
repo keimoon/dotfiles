@@ -1,5 +1,7 @@
 ;; update any change made on file to the current buffer
 (global-auto-revert-mode)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
 
 ;; hippie-expand is a better version of dabbrev-expand.
 ;; While dabbrev-expand searches for words you already types, in current;; buffers and other buffers, hippie-expand includes more sources,
