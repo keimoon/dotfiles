@@ -22,3 +22,5 @@
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [pull]
 	rebase = false
+[url "git@github.com:couchbaselabs/go-fleecedelta"]
+	insteadOf = https://github.com/couchbaselabs/go-fleecedelta

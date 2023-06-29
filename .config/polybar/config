@@ -80,7 +80,7 @@ font-4 = ${fonts.font-4}
 
 modules-left = user i3 xwindow
 modules-center = date
-modules-right = sound backlight system-logout system-restart system-shutdown
+modules-right = sound system-logout system-restart system-shutdown
 
 enable-ipc = true
 

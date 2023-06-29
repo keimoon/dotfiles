@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 
-if xrandr | grep -q 'HDMI-1 connected '; then
-    content=`xrandr | grep 'HDMI-1 connected '`
-    if ! echo "$content" | grep -q '+1920'; then
-        exit 0
-    fi
-fi
-xrandr --output HDMI-1 --auto --left-of eDP-1
+xrandr --output HDMI-1 --auto --right-of eDP-1 --primary
+xrandr --output DP-2 --mode 2560x1440 --rotate right --pos 4480x0

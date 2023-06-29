@@ -52,6 +52,7 @@ bindsym $mod+q workspace $ws1
 bindsym $mod+w workspace $ws2
 bindsym $mod+e workspace $ws3
 bindsym $mod+r workspace $ws4
+bindsym $mod+a workspace $ws5
 
 # Ibus
 bindsym $mod+space exec ~/.config/i3/scripts/ibus-switcher.sh
@@ -161,7 +162,7 @@ assign [class="jetbrains-idea-ce"] 4
 
 exec_always --no-startup-id xset r rate 250 60
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-# exec_always --no-startup-id ~/.config/i3/scripts/hdmi.sh
+exec_always --no-startup-id ~/.config/i3/scripts/hdmi.sh
 exec_always --no-startup-id ~/.config/i3/scripts/trackpad.sh
 # exec_always --no-startup-id ~/.config/i3/scripts/compton.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dunst.sh
