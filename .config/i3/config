@@ -57,6 +57,9 @@ bindsym $mod+a workspace $ws5
 # Ibus
 bindsym $mod+space exec ~/.config/i3/scripts/ibus-switcher.sh
 
+# Dunst
+bindsym $ctrl+$alt+0 exec /usr/bin/dunstctl close-all
+
 #######################################
 # Keybinding section (General)
 #######################################

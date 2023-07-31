@@ -7,7 +7,7 @@
 
 (setq diredp-hide-details-initially-flag nil)
 
-(mapc 'load (directory-files "~/.emacs.d/configs" t ".*\.el"))
+(mapc 'load (directory-files "~/.emacs.d/configs" t ".*\.el$"))
 (mapc 'load (directory-files "~/.emacs.d/libs" t ".*\.el"))
 
 ;; Dired+

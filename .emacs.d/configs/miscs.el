@@ -23,8 +23,8 @@
 
 (setq ibuffer-use-other-window t) ;; always display ibuffer in another window
 
-(add-hook 'prog-mode-hook 'linum-mode) ;; enable linum only in programming modes
-(add-hook 'yaml-mode-hook 'linum-mode) ;; enable linum in yaml modes
+(add-hook 'prog-mode-hook 'display-line-numbers-mode) ;; enable linum only in programming modes
+(add-hook 'yaml-mode-hook 'display-line-numbers-mode) ;; enable linum in yaml modes
 (setq linum-format "%4d \u2502 ")
 
 ;; whenever you create useless whitespace, the whitespace is highlighted

@@ -110,7 +110,7 @@ font-4 = ${fonts.font-4}
 
 modules-right = cpu memory temperature battery wifi
 
-tray-position = right
+tray-position = ${env:TRAY_POS}
 tray-detached = false
 tray-maxsize = 20
 tray-background = ${colors.background-tray}
@@ -298,11 +298,11 @@ format-muted-background = ${self.format-volume-background}
 
 label-volume = %percentage%%
 
-label-muted = 🔇
+label-muted = 
 
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 [module/system-logout]
 
 type = custom/text

@@ -17,13 +17,18 @@ EOF
 }
 
 function runPolybar {
-    killall -q polybar
+    killall -9 -q polybar
 
     while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
     for m in $(polybar --list-monitors | cut -d":" -f1); do
-        WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar --reload top > /tmp/polybar.top.$m.log 2>&1 &
-	    WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar --reload bottom > /tmp/polybar.bottom.$m.log 2>&1 &
+        if [ "$m" == "HDMI-0" ]; then
+            TRAY=right
+        else
+            TRAY=ignore
+        fi
+        WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m TRAY_POS=$TRAY polybar --reload top > /tmp/polybar.top.$m.log 2>&1 &
+	    WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m TRAY_POS=$TRAY polybar --reload bottom > /tmp/polybar.bottom.$m.log 2>&1 &
 
         # A little sleep here to put system tray to HDMI output
         sleep 1
