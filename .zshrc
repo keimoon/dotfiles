@@ -106,6 +106,8 @@ fi
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
+export PATH="/opt/java/current/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/home/keimoon/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

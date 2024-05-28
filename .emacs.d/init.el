@@ -18,6 +18,7 @@
 
 ;; Load language specific files here
 ;; (load "~/.emacs.d/lang-specific/c.el")
+;; (load "~/.emacs.d/lang-specific/scala.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -25,7 +26,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(lsp-mode dockerfile-mode markdown-mode terraform-mode helm-projectile yaml-mode ample-theme use-package))
+   '(lsp-metals lsp-mode dockerfile-mode markdown-mode terraform-mode helm-projectile yaml-mode ample-theme use-package))
  '(python-indent-offset 2)
  '(warning-suppress-log-types '((comp) (comp)))
  '(warning-suppress-types '((comp))))

@@ -66,3 +66,7 @@
 	 (define-key company-active-map (kbd "C-c C-c") 'helm-company)))
     )
   )
+
+;; Yaml
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
